@@ -19,6 +19,10 @@ and key-value persistence; no API key or environment file is required.
 
 ## Product screenshots
 
+### Resume analysis dashboard
+
+![Resume analysis dashboard showing a saved application, ATS score, and resume preview](public/readme/resume-dashboard.png)
+
 ### ATS score and category breakdown
 
 ![Resume review showing the PDF preview, ATS score, and feedback categories](public/readme/resume-review-score.png)
