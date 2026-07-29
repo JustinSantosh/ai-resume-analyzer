@@ -13,8 +13,8 @@ const Navbar = () => {
 
     return (
         <nav className="navbar" aria-label="Primary navigation">
-            <Link to="/" aria-label="Resumind home">
-                <span className="text-gradient text-2xl font-bold">RESUMIND</span>
+            <Link to="/" aria-label="Unemployed ki lathi home">
+                <span className="text-gradient text-lg font-bold sm:text-2xl">Unemployed ki lathi</span>
             </Link>
             <div className="flex items-center gap-2">
                 <Link to="/upload" className="primary-button w-fit">

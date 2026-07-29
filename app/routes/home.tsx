@@ -9,7 +9,7 @@ import { useResumeHistory } from "~/hooks/useResumeHistory";
 
 export function meta({}: Route.MetaArgs) {
     return [
-        { title: "Resumind | Resume dashboard" },
+        { title: "Unemployed ki lathi | Resume dashboard" },
         { name: "description", content: "Review your AI-powered resume analyses." },
     ];
 }

@@ -9,7 +9,7 @@ import { useProtectedRoute } from "~/hooks/useProtectedRoute";
 import { useResumeReview } from "~/hooks/useResumeReview";
 
 export const meta = () => [
-    { title: "Resumind | Resume review" },
+    { title: "Unemployed ki lathi | Resume review" },
     { name: "description", content: "Detailed AI-powered resume feedback." },
 ];
 

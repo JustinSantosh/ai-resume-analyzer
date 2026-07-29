@@ -1,6 +1,6 @@
-# AI Resume Analyzer
+# Unemployed ki lathi
 
-Resumind is a browser-only resume analyzer built with React 19, React Router 7,
+Unemployed ki lathi is a browser-only resume analyzer built with React 19, React Router 7,
 TypeScript, Tailwind CSS 4, Zustand, PDF.js, and Puter.js. Users authenticate,
 upload a PDF resume, compare it with a job description, receive structured ATS
 feedback, and revisit previous analyses without operating a backend.
