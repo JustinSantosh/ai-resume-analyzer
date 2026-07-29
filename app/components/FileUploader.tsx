@@ -30,7 +30,7 @@ const FileUploader = ({ file, onFileSelect, disabled = false }: FileUploaderProp
             <div
                 {...getRootProps({
                     className:
-                        "min-h-52 cursor-pointer rounded-xl bg-white p-8 text-center focus-visible:outline-2 focus-visible:outline-indigo-600",
+                        "min-h-52 cursor-pointer rounded-xl bg-white p-8 text-center focus-visible:outline-2 focus-visible:outline-brand-blue",
                 })}
             >
                 <input {...getInputProps({ "aria-label": "Select a PDF resume" })} />
@@ -43,7 +43,7 @@ const FileUploader = ({ file, onFileSelect, disabled = false }: FileUploaderProp
                         </div>
                         <button
                             type="button"
-                            className="cursor-pointer rounded p-2 focus-visible:outline-2 focus-visible:outline-indigo-600"
+                            className="cursor-pointer rounded p-2 focus-visible:outline-2 focus-visible:outline-brand-blue"
                             onClick={() => onFileSelect(null)}
                             aria-label={`Remove ${file.name}`}
                         >
@@ -73,4 +73,3 @@ const FileUploader = ({ file, onFileSelect, disabled = false }: FileUploaderProp
 };
 
 export default FileUploader;
-

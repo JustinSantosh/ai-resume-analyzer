@@ -49,7 +49,7 @@ const Resume = () => {
                     </section>
                     <section className="feedback-section">
                         <header>
-                            <p className="font-medium text-indigo-600">{data.resume.company}</p>
+                            <p className="font-medium text-brand-red">{data.resume.company}</p>
                             <h1 className="!text-black text-4xl font-bold">Resume Review</h1>
                             <p className="mt-2 text-gray-600">{data.resume.jobTitle}</p>
                         </header>
@@ -70,4 +70,3 @@ const Resume = () => {
 };
 
 export default Resume;
-

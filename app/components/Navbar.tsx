@@ -23,7 +23,7 @@ const Navbar = () => {
                 <button
                     type="button"
                     onClick={handleLogout}
-                    className="rounded-full px-4 py-2 font-medium text-gray-700 hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-indigo-600"
+                    className="rounded-full px-4 py-2 font-medium text-gray-700 hover:bg-brand-red-soft focus-visible:outline-2 focus-visible:outline-brand-blue"
                 >
                     Log out
                 </button>
@@ -33,4 +33,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

@@ -6,8 +6,8 @@ interface InsightListProps {
 
 const toneClasses = {
     positive: "border-emerald-200 bg-emerald-50",
-    negative: "border-amber-200 bg-amber-50",
-    neutral: "border-indigo-200 bg-indigo-50",
+    negative: "border-brand-red/25 bg-brand-red-soft",
+    neutral: "border-brand-blue/25 bg-brand-blue-soft",
 };
 
 const InsightList = ({ title, items, tone }: InsightListProps) => (
@@ -44,4 +44,3 @@ const AnalysisInsights = ({ analysis }: AnalysisInsightsProps) => (
 );
 
 export default AnalysisInsights;
-

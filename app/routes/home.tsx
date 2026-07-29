@@ -23,7 +23,7 @@ export default function Home() {
             <Navbar />
             <section className="main-section">
                 <header className="page-heading py-16">
-                    <p className="font-semibold uppercase tracking-[0.2em] text-indigo-600">
+                    <p className="font-semibold uppercase tracking-[0.2em] text-brand-blue">
                         Your application workspace
                     </p>
                     <h1>Track Your Applications & Resume Ratings</h1>
@@ -56,4 +56,3 @@ export default function Home() {
         </main>
     );
 }
-

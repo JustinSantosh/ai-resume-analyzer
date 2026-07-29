@@ -9,7 +9,7 @@ interface ResumeCardProps {
 const ResumeCard = ({ resume }: ResumeCardProps) => (
     <Link
         to={`/resume/${resume.id}`}
-        className="resume-card group transition duration-200 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600"
+        className="resume-card group transition duration-200 hover:-translate-y-1 hover:border-brand-red/25 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"
         aria-label={`Open ${resume.jobTitle} resume analysis for ${resume.company}`}
     >
         <div className="resume-card-header">
@@ -36,4 +36,3 @@ const ResumeCard = ({ resume }: ResumeCardProps) => (
 );
 
 export default ResumeCard;
-
