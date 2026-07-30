@@ -4,12 +4,13 @@ import AnalysisInsights from "~/components/AnalysisInsights";
 import ATS from "~/components/ATS";
 import Details from "~/components/Details";
 import LoadingScreen from "~/components/LoadingScreen";
+import ResumeKeywordView from "~/components/ResumeKeywordView";
 import Summary from "~/components/Summary";
 import { useProtectedRoute } from "~/hooks/useProtectedRoute";
 import { useResumeReview } from "~/hooks/useResumeReview";
 
 export const meta = () => [
-    { title: "Unemployed ki lathi | Resume review" },
+    { title: "Berozgar ki lathi | Resume review" },
     { name: "description", content: "Detailed AI-powered resume feedback." },
 ];
 
@@ -37,15 +38,12 @@ const Resume = () => {
             {data && (
                 <div className="flex w-full flex-row max-lg:flex-col-reverse">
                     <section className="feedback-section sticky top-0 h-screen items-center justify-center bg-[url('/images/bg-small.svg')] bg-cover max-lg:static max-lg:h-auto">
-                        <div className="gradient-border h-[90%] w-fit max-w-full">
-                            <a href={data.resumeUrl} target="_blank" rel="noopener noreferrer" aria-label="Open the original resume PDF">
-                                <img
-                                    src={data.previewUrl}
-                                    className="h-full w-full rounded-2xl object-contain"
-                                    alt={`Resume preview for ${data.resume.jobTitle}`}
-                                />
-                            </a>
-                        </div>
+                        <ResumeKeywordView
+                            analysis={data.analysis}
+                            previewUrl={data.previewUrl}
+                            resumeText={data.resume.resumeText}
+                            resumeUrl={data.resumeUrl}
+                        />
                     </section>
                     <section className="feedback-section">
                         <header>

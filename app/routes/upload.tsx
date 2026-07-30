@@ -6,7 +6,7 @@ import { useProtectedRoute } from "~/hooks/useProtectedRoute";
 import { useResumeUpload } from "~/hooks/useResumeUpload";
 
 export const meta = () => [
-    { title: "Unemployed ki lathi | Analyze resume" },
+    { title: "Berozgar ki lathi | Analyze resume" },
     { name: "description", content: "Match a PDF resume to your target role." },
 ];
 

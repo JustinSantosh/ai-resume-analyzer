@@ -1,6 +1,6 @@
-# Unemployed ki lathi
+# Berozgar ki lathi
 
-Unemployed ki lathi is a browser-only resume analyzer built with React 19, React Router 7,
+Berozgar ki lathi is a browser-only resume analyzer built with React 19, React Router 7,
 TypeScript, Tailwind CSS 4, Zustand, PDF.js, and Puter.js. Users authenticate,
 upload a PDF resume, compare it with a job description, receive structured ATS
 feedback, and revisit previous analyses without operating a backend.
@@ -19,21 +19,25 @@ and key-value persistence; no API key or environment file is required.
 
 ## Product screenshots
 
-### Resume analysis dashboard
+### Resume upload
 
-![Resume analysis dashboard showing a saved application, ATS score, and resume preview](public/readme/resume-dashboard.png)
+![Resume upload form for entering a company, role, experience requirement, and job description](public/readme/resume-upload.png)
 
-### ATS score and category breakdown
+### Resume score overview
 
-![Resume review showing the PDF preview, ATS score, and feedback categories](public/readme/resume-review-score.png)
+![Resume review showing the PDF preview, overall resume score, and category scores](public/readme/resume-review-score.png)
+
+### ATS feedback and category breakdown
+
+![Resume review showing ATS feedback beside the uploaded PDF and detailed feedback categories](public/readme/resume-review-ats.png)
 
 ### AI summary, strengths, and weaknesses
 
-![Resume review showing the AI summary with strengths and weaknesses](public/readme/resume-review-insights.png)
+![AI-generated resume summary with strengths and weaknesses](public/readme/resume-review-insights.png)
 
 ### Priority recommendations
 
-![Resume review showing matched keywords and priority improvement suggestions](public/readme/resume-review-suggestions.png)
+![Priority suggestions for improving the resume for the target role](public/readme/resume-review-suggestions.png)
 
 ## Validate
 

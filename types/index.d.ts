@@ -9,6 +9,17 @@ interface FeedbackCategory {
     tips: FeedbackTip[];
 }
 
+interface KeywordInsight {
+    keyword: string;
+    explanation: string;
+}
+
+interface KeywordAnalysis {
+    matched: KeywordInsight[];
+    missing: KeywordInsight[];
+    unnecessary: KeywordInsight[];
+}
+
 interface Feedback {
     overallScore: number;
     summary: string;
@@ -19,6 +30,7 @@ interface Feedback {
     skills: FeedbackCategory;
     matchedKeywords: string[];
     missingKeywords: string[];
+    keywordAnalysis?: KeywordAnalysis;
     strengths: string[];
     weaknesses: string[];
     suggestions: string[];
@@ -36,6 +48,7 @@ interface Analysis {
     keywordScore: number;
     matchedKeywords: string[];
     missingKeywords: string[];
+    unnecessaryKeywords?: string[];
     strengths: string[];
     weaknesses: string[];
     suggestions: string[];
