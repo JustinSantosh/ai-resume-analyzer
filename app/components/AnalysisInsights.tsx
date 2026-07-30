@@ -38,7 +38,7 @@ const KeywordList = ({
     title: string;
     description: string;
     items: KeywordInsight[];
-    tone: "matched" | "missing" | "unnecessary";
+    tone: "matched" | "missing";
 }) => {
     const matched = tone === "matched";
 
@@ -113,12 +113,6 @@ const AnalysisInsights = ({ analysis }: AnalysisInsightsProps) => {
                         description="Important role terms not found in your resume."
                         items={keywordAnalysis.missing}
                         tone="missing"
-                    />
-                    <KeywordList
-                        title="Unnecessary terms"
-                        description="Shown in red where they appear in the annotated resume."
-                        items={keywordAnalysis.unnecessary}
-                        tone="unnecessary"
                     />
                 </div>
             </section>

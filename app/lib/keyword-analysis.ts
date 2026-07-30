@@ -18,9 +18,5 @@ export const getKeywordAnalysis = (analysis: Analysis): KeywordAnalysis => {
             analysis.missingKeywords,
             "The job description uses this term, but it was not found in your resume.",
         ),
-        unnecessary: createFallbackInsights(
-            analysis.unnecessaryKeywords ?? [],
-            "This term may not strengthen your fit for the target role.",
-        ),
     };
 };

@@ -36,16 +36,13 @@ const parseKeywordAnalysis = (value: unknown): KeywordAnalysis => {
         !Array.isArray(analysis.matched) ||
         !analysis.matched.every(isKeywordInsight) ||
         !Array.isArray(analysis.missing) ||
-        !analysis.missing.every(isKeywordInsight) ||
-        !Array.isArray(analysis.unnecessary) ||
-        !analysis.unnecessary.every(isKeywordInsight)
+        !analysis.missing.every(isKeywordInsight)
     ) {
         throw new ApplicationError("INVALID_ANALYSIS", "AI returned malformed keyword feedback.");
     }
     return {
         matched: analysis.matched,
         missing: analysis.missing,
-        unnecessary: analysis.unnecessary,
     };
 };
 
@@ -130,14 +127,13 @@ Return only valid JSON with this exact shape:
   "missingKeywords": ["string"],
   "keywordAnalysis": {
     "matched": [{"keyword": "string", "explanation": "why this term supports the target role"}],
-    "missing": [{"keyword": "string", "explanation": "why this job-description term should be added, if truthful"}],
-    "unnecessary": [{"keyword": "string", "explanation": "why this exact resume term or phrase weakens relevance"}]
+    "missing": [{"keyword": "string", "explanation": "why this job-description term should be added, if truthful"}]
   },
   "strengths": ["string"],
   "weaknesses": ["string"],
   "suggestions": ["string"]
 }
-All scores must be integers from 0 to 100. Every matched and unnecessary keyword must appear verbatim in the extracted resume text. Missing keywords must come from the job description and must not appear in the resume. Only mark a term unnecessary when it is generic filler, excessive repetition, or clearly irrelevant to this target role; do not flag contact details, education, employer names, or neutral resume language. Keep keyword lists concise, deduplicated, and specific. Be candid and actionable.`;
+All scores must be integers from 0 to 100. Every matched keyword must appear verbatim in the extracted resume text. Missing keywords must come from the job description and must not appear in the resume. Keep keyword lists concise, deduplicated, and specific. Be candid and actionable.`;
 
 const extractResponseText = (response: AIResponse): string => {
     if (typeof response.message.content === "string") {
@@ -180,7 +176,6 @@ const analyzeResume = async (input: AnalysisInput): Promise<Analysis> => {
         keywordScore: feedback.ATS.score,
         matchedKeywords: feedback.matchedKeywords,
         missingKeywords: feedback.missingKeywords,
-        unnecessaryKeywords: feedback.keywordAnalysis?.unnecessary.map(({ keyword }) => keyword),
         strengths: feedback.strengths,
         weaknesses: feedback.weaknesses,
         suggestions: feedback.suggestions,

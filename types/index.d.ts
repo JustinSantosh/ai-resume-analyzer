@@ -17,7 +17,6 @@ interface KeywordInsight {
 interface KeywordAnalysis {
     matched: KeywordInsight[];
     missing: KeywordInsight[];
-    unnecessary: KeywordInsight[];
 }
 
 interface Feedback {
@@ -48,7 +47,6 @@ interface Analysis {
     keywordScore: number;
     matchedKeywords: string[];
     missingKeywords: string[];
-    unnecessaryKeywords?: string[];
     strengths: string[];
     weaknesses: string[];
     suggestions: string[];

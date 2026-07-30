@@ -158,3 +158,53 @@ form {
     opacity: 1;
   }
 }
+
+.pdf-keyword-pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pdf-keyword-page {
+  --user-unit: 1;
+  --total-scale-factor: calc(var(--scale-factor) * var(--user-unit));
+  --scale-round-x: 1px;
+  --scale-round-y: 1px;
+  position: relative;
+  flex: none;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 30px rgba(32, 45, 90, 0.14);
+}
+
+.pdf-keyword-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.pdf-keyword-text-layer {
+  position: absolute;
+  inset: 0;
+  overflow: clip;
+  line-height: 1;
+  text-align: initial;
+  text-size-adjust: none;
+  transform-origin: 0 0;
+}
+
+.pdf-keyword-text-layer :is(span, br) {
+  position: absolute;
+  color: transparent;
+  white-space: pre;
+  cursor: text;
+  transform-origin: 0% 0%;
+}
+
+.pdf-keyword-mark {
+  border-radius: 2px;
+  background: rgba(82, 103, 207, 0.34);
+  color: transparent;
+  box-shadow: 0 0 0 1px rgba(82, 103, 207, 0.22);
+}

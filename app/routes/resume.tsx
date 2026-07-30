@@ -41,7 +41,6 @@ const Resume = () => {
                         <ResumeKeywordView
                             analysis={data.analysis}
                             previewUrl={data.previewUrl}
-                            resumeText={data.resume.resumeText}
                             resumeUrl={data.resumeUrl}
                         />
                     </section>
